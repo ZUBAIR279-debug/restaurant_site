@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Royal Feast Restaurant{% endblock %}</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-purple': '#2d1b69',
+                        'dark-black': '#0a0a0a',
+                        'accent-gold': '#d4af37',
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'pulse-slow': 'pulse 3s infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #0a0a0a 0%, #2d1b69 100%);
+        }
+
+        .hover-lift {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body class="bg-dark-black text-white font-sans">
+    <!-- Navigation -->
+    <nav class="gradient-bg py-4 px-6 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-2xl font-serif font-bold text-accent-gold">Royal Feast</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="/" class="hover:text-accent-gold transition duration-300">Home</a>
+                <a href="/about" class="hover:text-accent-gold transition duration-300">About</a>
+                <a href="/menu" class="hover:text-accent-gold transition duration-300">Menu</a>
+                <a href="/booking" class="hover:text-accent-gold transition duration-300">Reservations</a>
+                <a href="/contact" class="hover:text-accent-gold transition duration-300">Contact</a>
+                <a href="/delivery" class="hover:text-accent-gold transition duration-300">Delivery</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden mt-4 pb-4">
+            <a href="/" class="block py-2 hover:text-accent-gold transition duration-300">Home</a>
+            <a href="/about" class="block py-2 hover:text-accent-gold transition duration-300">About</a>
+            <a href="/menu" class="block py-2 hover:text-accent-gold transition duration-300">Menu</a>
+            <a href="/booking" class="block py-2 hover:text-accent-gold transition duration-300">Reservations</a>
+            <a href="/contact" class="block py-2 hover:text-accent-gold transition duration-300">Contact</a>
+            <a href="/delivery" class="block py-2 hover:text-accent-gold transition duration-300">Delivery</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="gradient-bg py-12 mt-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-serif font-bold text-accent-gold mb-4">Royal Feast</h3>
+                    <p class="text-gray-300">Experience culinary excellence in an ambiance of luxury and comfort.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-gray-300 hover:text-accent-gold transition duration-300">Home</a>
+                        </li>
+                        <li><a href="/menu"
+                                class="text-gray-300 hover:text-accent-gold transition duration-300">Menu</a></li>
+                        <li><a href="/booking"
+                                class="text-gray-300 hover:text-accent-gold transition duration-300">Reservations</a>
+                        </li>
+                        <li><a href="/contact"
+                                class="text-gray-300 hover:text-accent-gold transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <p class="text-gray-300">123 Gourmet Avenue, Food District</p>
+                    <p class="text-gray-300">Phone: (555) 123-4567</p>
+                    <p class="text-gray-300">Email: info@royalfeast.com</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Royal Feast Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

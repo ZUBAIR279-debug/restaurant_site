@@ -1,0 +1,239 @@
+{% extends "base.html" %}
+
+{% block title %}Reservations - Royal Feast{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative py-32 flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
+            alt="Restaurant Table Setting" class="w-full h-full object-cover opacity-40">
+        <div class="absolute inset-0 bg-gradient-to-r from-dark-black to-dark-purple opacity-80"></div>
+    </div>
+    <div class="relative z-10 text-center px-6 animate-fade-in">
+        <h1 class="text-5xl md:text-6xl font-serif font-bold mb-6">Reservations</h1>
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto">Secure your table for an unforgettable dining experience</p>
+    </div>
+</section>
+
+<!-- Booking Form Section -->
+<section class="py-20 px-6">
+    <div class="container mx-auto max-w-4xl">
+        <div class="bg-dark-black rounded-lg shadow-2xl p-8 md:p-12">
+            <h2 class="text-3xl font-serif font-bold mb-8 text-center">Book Your Table</h2>
+            <form id="booking-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label for="name" class="block text-gray-300 mb-2">Full Name *</label>
+                    <input type="text" id="name" name="name" required
+                        class="w-full px-4 py-3 bg-dark-purple bg-opacity-30 border border-gray-700 rounded-lg focus:outline-none focus:border-accent-gold transition duration-300">
+                </div>
+                <div>
+                    <label for="email" class="block text-gray-300 mb-2">Email Address *</label>
+                    <input type="email" id="email" name="email" required
+                        class="w-full px-4 py-3 bg-dark-purple bg-opacity-30 border border-gray-700 rounded-lg focus:outline-none focus:border-accent-gold transition duration-300">
+                </div>
+                <div>
+                    <label for="phone" class="block text-gray-300 mb-2">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required
+                        class="w-full px-4 py-3 bg-dark-purple bg-opacity-30 border border-gray-700 rounded-lg focus:outline-none focus:border-accent-gold transition duration-300">
+                </div>
+                <div>
+                    <label for="guests" class="block text-gray-300 mb-2">Number of Guests *</label>
+                    <select id="guests" name="guests" required
+                        class="w-full px-4 py-3 bg-dark-purple bg-opacity-30 border border-gray-700 rounded-lg focus:outline-none focus:border-accent-gold transition duration-300">
+                        <option value="">Select number of guests</option>
+                        <option value="1">1 person</option>
+                        <option value="2">2 people</option>
+                        <option value="3">3 people</option>
+                        <option value="4">4 people</option>
+                        <option value="5">5 people</option>
+                        <option value="6">6 people</option>
+                        <option value="7">7 people</option>
+                        <option value="8">8 people</option>
+                        <option value="9">9+ people (Please call)</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="date" class="block text-gray-300 mb-2">Date *</label>
+                    <input type="date" id="date" name="date" required
+                        class="w-full px-4 py-3 bg-dark-purple bg-opacity-30 border border-gray-700 rounded-lg focus:outline-none focus:border-accent-gold transition duration-300">
+                </div>
+                <div>
+                    <label for="time" class="block text-gray-300 mb-2">Time *</label>
+                    <select id="time" name="time" required
+                        class="w-full px-4 py-3 bg-dark-purple bg-opacity-30 border border-gray-700 rounded-lg focus:outline-none focus:border-accent-gold transition duration-300">
+                        <option value="">Select time</option>
+                        <option value="17:00">5:00 PM</option>
+                        <option value="17:30">5:30 PM</option>
+                        <option value="18:00">6:00 PM</option>
+                        <option value="18:30">6:30 PM</option>
+                        <option value="19:00">7:00 PM</option>
+                        <option value="19:30">7:30 PM</option>
+                        <option value="20:00">8:00 PM</option>
+                        <option value="20:30">8:30 PM</option>
+                        <option value="21:00">9:00 PM</option>
+                    </select>
+                </div>
+                <div class="md:col-span-2">
+                    <label for="special-requests" class="block text-gray-300 mb-2">Special Requests</label>
+                    <textarea id="special-requests" name="special-requests" rows="4"
+                        class="w-full px-4 py-3 bg-dark-purple bg-opacity-30 border border-gray-700 rounded-lg focus:outline-none focus:border-accent-gold transition duration-300"></textarea>
+                </div>
+                <div class="md:col-span-2 flex justify-center mt-6">
+                    <button type="submit" id="submit-btn"
+                        class="bg-accent-gold text-dark-black font-semibold py-3 px-8 rounded-lg hover:bg-yellow-500 transition duration-300 text-lg">
+                        Book Now
+                    </button>
+                </div>
+            </form>
+
+            <!-- Success Message -->
+            <div id="success-message" class="hidden mt-6 p-4 bg-green-600 text-white rounded-lg text-center">
+                <p>Thank you for your reservation! We will contact you shortly to confirm your booking.</p>
+            </div>
+
+            <!-- Error Message -->
+            <div id="error-message" class="hidden mt-6 p-4 bg-red-600 text-white rounded-lg text-center">
+                <p id="error-text">There was an error processing your reservation. Please try again.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Rest of your HTML content remains the same -->
+<section class="py-20 px-6 bg-dark-purple bg-opacity-30">
+    <div class="container mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif font-bold mb-4">Reservation Information</h2>
+            <p class="text-gray-300 max-w-2xl mx-auto">Everything you need to know before your visit</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center p-6">
+                <div class="text-4xl text-accent-gold mb-4">⏰</div>
+                <h3 class="text-xl font-semibold mb-4">Hours of Operation</h3>
+                <p class="text-gray-300">Monday - Thursday: 5:00 PM - 10:00 PM</p>
+                <p class="text-gray-300">Friday - Saturday: 5:00 PM - 11:00 PM</p>
+                <p class="text-gray-300">Sunday: 5:00 PM - 9:00 PM</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="text-4xl text-accent-gold mb-4">👔</div>
+                <h3 class="text-xl font-semibold mb-4">Dress Code</h3>
+                <p class="text-gray-300">We maintain an elegant atmosphere. Business casual or cocktail attire is
+                    recommended.</p>
+            </div>
+            <div class="text-center p-6">
+                <div class="text-4xl text-accent-gold mb-4">ℹ️</div>
+                <h3 class="text-xl font-semibold mb-4">Important Notes</h3>
+                <p class="text-gray-300">Reservations are held for 15 minutes past the reserved time. For parties of 8
+                    or more, please call us directly.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 px-6">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-serif font-bold mb-6">Need to Modify Your Reservation?</h2>
+        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Contact us directly for any changes or special
+            arrangements</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+            <div class="p-6 bg-dark-black rounded-lg">
+                <h3 class="text-xl font-semibold mb-4">Phone</h3>
+                <p class="text-accent-gold text-2xl">(555) 123-4567</p>
+            </div>
+            <div class="p-6 bg-dark-black rounded-lg">
+                <h3 class="text-xl font-semibold mb-4">Email</h3>
+                <p class="text-accent-gold">reservations@royalfeast.com</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Set minimum date to today
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('date').min = today;
+
+    // Form submission handling
+    document.getElementById('booking-form').addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        // Get form data
+        const formData = new FormData(this);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            guests: formData.get('guests'),
+            date: formData.get('date'),
+            time: formData.get('time'),
+            'special-requests': formData.get('special-requests')
+        };
+
+        // Simple form validation
+        if (!data.name || !data.email || !data.phone || !data.guests || !data.date || !data.time) {
+            showError('Please fill in all required fields.');
+            return;
+        }
+
+        // Disable submit button
+        const submitBtn = document.getElementById('submit-btn');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Processing...';
+
+        try {
+            // Send data to server
+            const response = await fetch('/submit_reservation', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                showSuccess('Thank you for your reservation! We will contact you shortly to confirm your booking.');
+                this.reset();
+            } else {
+                showError(result.error || 'There was an error processing your reservation.');
+            }
+        } catch (error) {
+            showError('Network error. Please try again.');
+        } finally {
+            // Re-enable submit button
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Book Now';
+        }
+    });
+
+    function showSuccess(message) {
+        const successMsg = document.getElementById('success-message');
+        const errorMsg = document.getElementById('error-message');
+
+        successMsg.querySelector('p').textContent = message;
+        successMsg.classList.remove('hidden');
+        errorMsg.classList.add('hidden');
+
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+            successMsg.classList.add('hidden');
+        }, 5000);
+    }
+
+    function showError(message) {
+        const successMsg = document.getElementById('success-message');
+        const errorMsg = document.getElementById('error-message');
+
+        document.getElementById('error-text').textContent = message;
+        errorMsg.classList.remove('hidden');
+        successMsg.classList.add('hidden');
+
+        // Hide error message after 5 seconds
+        setTimeout(() => {
+            errorMsg.classList.add('hidden');
+        }, 5000);
+    }
+</script>
+{% endblock %}

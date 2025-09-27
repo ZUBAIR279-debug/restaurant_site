@@ -1,0 +1,256 @@
+{% extends "base.html" %}
+
+{% block title %}Menu - Royal Feast{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative py-32 flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="Restaurant Food" class="w-full h-full object-cover opacity-40">
+        <div class="absolute inset-0 bg-gradient-to-r from-dark-black to-dark-purple opacity-80"></div>
+    </div>
+    <div class="relative z-10 text-center px-6 animate-fade-in">
+        <h1 class="text-5xl md:text-6xl font-serif font-bold mb-6">Our Menu</h1>
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto">A culinary journey through flavors and traditions</p>
+    </div>
+</section>
+
+<!-- Menu Navigation -->
+<section class="py-8 px-6 bg-dark-purple bg-opacity-30 sticky top-16 z-40">
+    <div class="container mx-auto">
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="#appetizers" class="text-accent-gold font-semibold hover:underline">Appetizers</a>
+            <a href="#mains" class="text-white font-semibold hover:text-accent-gold">Main Courses</a>
+            <a href="#desserts" class="text-white font-semibold hover:text-accent-gold">Desserts</a>
+            <a href="#drinks" class="text-white font-semibold hover:text-accent-gold">Drinks</a>
+            <a href="#wine" class="text-white font-semibold hover:text-accent-gold">Wine Pairings</a>
+        </div>
+    </div>
+</section>
+
+<!-- Appetizers Section -->
+<section id="appetizers" class="py-20 px-6">
+    <div class="container mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif font-bold mb-4">Appetizers</h2>
+            <p class="text-gray-300 max-w-2xl mx-auto">Start your culinary journey with these exquisite beginnings</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Appetizer 1 -->
+            <div class="bg-dark-black rounded-lg p-6 shadow-xl hover-lift">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-semibold">Truffle Arancini</h3>
+                    <span class="text-accent-gold font-bold">$18</span>
+                </div>
+                <p class="text-gray-300 mb-4">Crispy risotto balls filled with black truffle and mozzarella, served with
+                    truffle aioli</p>
+                <span
+                    class="inline-block bg-dark-purple bg-opacity-50 text-accent-gold text-xs px-2 py-1 rounded">Vegetarian</span>
+            </div>
+            <!-- Appetizer 2 -->
+            <div class="bg-dark-black rounded-lg p-6 shadow-xl hover-lift">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-semibold">Seared Scallops</h3>
+                    <span class="text-accent-gold font-bold">$24</span>
+                </div>
+                <p class="text-gray-300 mb-4">Perfectly seared scallops with cauliflower purée, crispy pancetta, and
+                    microgreens</p>
+            </div>
+            <!-- Appetizer 3 -->
+            <div class="bg-dark-black rounded-lg p-6 shadow-xl hover-lift">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-semibold">Beef Tartare</h3>
+                    <span class="text-accent-gold font-bold">$22</span>
+                </div>
+                <p class="text-gray-300 mb-4">Hand-cut prime beef with capers, cornichons, quail egg, and toasted
+                    brioche</p>
+            </div>
+            <!-- Appetizer 4 -->
+            <div class="bg-dark-black rounded-lg p-6 shadow-xl hover-lift">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-semibold">Burrata Caprese</h3>
+                    <span class="text-accent-gold font-bold">$16</span>
+                </div>
+                <p class="text-gray-300 mb-4">Creamy burrata with heirloom tomatoes, basil oil, and balsamic reduction
+                </p>
+                <span
+                    class="inline-block bg-dark-purple bg-opacity-50 text-accent-gold text-xs px-2 py-1 rounded">Vegetarian</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Courses Section -->
+<section id="mains" class="py-20 px-6 bg-dark-purple bg-opacity-30">
+    <div class="container mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif font-bold mb-4">Main Courses</h2>
+            <p class="text-gray-300 max-w-2xl mx-auto">Our chef's signature creations</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Main 1 -->
+            <div class="bg-dark-black rounded-lg p-6 shadow-xl hover-lift">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-semibold">Filet Mignon</h3>
+                    <span class="text-accent-gold font-bold">$42</span>
+                </div>
+                <p class="text-gray-300 mb-4">8oz prime beef tenderloin with truffle mashed potatoes, seasonal
+                    vegetables, and red wine reduction</p>
+            </div>
+            <!-- Main 2 -->
+            <div class="bg-dark-black rounded-lg p-6 shadow-xl hover-lift">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-semibold">Lobster Thermidor</h3>
+                    <span class="text-accent-gold font-bold">$38</span>
+                </div>
+                <p class="text-gray-300 mb-4">Whole lobster in a creamy brandy sauce with gruyère cheese, served with
+                    asparagus</p>
+            </div>
+            <!-- Main 3 -->
+            <div class="bg-dark-black rounded-lg p-6 shadow-xl hover-lift">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-semibold">Duck Confit</h3>
+                    <span class="text-accent-gold font-bold">$34</span>
+                </div>
+                <p class="text-gray-300 mb-4">Slow-cooked duck leg with cherry gastrique, roasted potatoes, and haricots
+                    verts</p>
+            </div>
+            <!-- Main 4 -->
+            <div class="bg-dark-black rounded-lg p-6 shadow-xl hover-lift">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-semibold">Wild Mushroom Risotto</h3>
+                    <span class="text-accent-gold font-bold">$26</span>
+                </div>
+                <p class="text-gray-300 mb-4">Arborio rice with seasonal wild mushrooms, white wine, and parmesan</p>
+                <span
+                    class="inline-block bg-dark-purple bg-opacity-50 text-accent-gold text-xs px-2 py-1 rounded">Vegetarian</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Desserts Section -->
+<section id="desserts" class="py-20 px-6">
+    <div class="container mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif font-bold mb-4">Desserts</h2>
+            <p class="text-gray-300 max-w-2xl mx-auto">Sweet endings to your royal feast</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Dessert 1 -->
+            <div class="bg-dark-black rounded-lg p-6 shadow-xl hover-lift">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-semibold">Chocolate Soufflé</h3>
+                    <span class="text-accent-gold font-bold">$16</span>
+                </div>
+                <p class="text-gray-300 mb-4">Warm chocolate soufflé with a molten center, served with vanilla bean ice
+                    cream</p>
+            </div>
+            <!-- Dessert 2 -->
+            <div class="bg-dark-black rounded-lg p-6 shadow-xl hover-lift">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-semibold">Crème Brûlée</h3>
+                    <span class="text-accent-gold font-bold">$12</span>
+                </div>
+                <p class="text-gray-300 mb-4">Classic vanilla bean custard with a caramelized sugar crust and fresh
+                    berries</p>
+            </div>
+            <!-- Dessert 3 -->
+            <div class="bg-dark-black rounded-lg p-6 shadow-xl hover-lift">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-semibold">Tiramisu</h3>
+                    <span class="text-accent-gold font-bold">$14</span>
+                </div>
+                <p class="text-gray-300 mb-4">Layers of espresso-soaked ladyfingers and mascarpone cream, dusted with
+                    cocoa</p>
+            </div>
+            <!-- Dessert 4 -->
+            <div class="bg-dark-black rounded-lg p-6 shadow-xl hover-lift">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-semibold">Seasonal Fruit Tart</h3>
+                    <span class="text-accent-gold font-bold">$13</span>
+                </div>
+                <p class="text-gray-300 mb-4">Buttery tart shell filled with pastry cream and topped with seasonal
+                    fruits</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Wine Pairing Section -->
+<section id="wine" class="py-20 px-6 bg-dark-purple bg-opacity-30">
+    <div class="container mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif font-bold mb-4">Wine Pairings</h2>
+            <p class="text-gray-300 max-w-2xl mx-auto">Curated selections to complement your meal</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Wine 1 -->
+            <div class="bg-dark-black rounded-lg p-6 shadow-xl hover-lift">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-semibold">Château Margaux 2015</h3>
+                    <span class="text-accent-gold font-bold">$185</span>
+                </div>
+                <p class="text-gray-300 mb-2">Bordeaux, France</p>
+                <p class="text-gray-300 text-sm">Pairs perfectly with red meats and hearty dishes</p>
+            </div>
+            <!-- Wine 2 -->
+            <div class="bg-dark-black rounded-lg p-6 shadow-xl hover-lift">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-semibold">Dom Pérignon 2010</h3>
+                    <span class="text-accent-gold font-bold">$250</span>
+                </div>
+                <p class="text-gray-300 mb-2">Champagne, France</p>
+                <p class="text-gray-300 text-sm">Ideal for celebrations and seafood dishes</p>
+            </div>
+            <!-- Wine 3 -->
+            <div class="bg-dark-black rounded-lg p-6 shadow-xl hover-lift">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-semibold">Sassicaia 2018</h3>
+                    <span class="text-accent-gold font-bold">$220</span>
+                </div>
+                <p class="text-gray-300 mb-2">Tuscany, Italy</p>
+                <p class="text-gray-300 text-sm">Excellent with pasta and tomato-based dishes</p>
+            </div>
+            <!-- Wine 4 -->
+            <div class="bg-dark-black rounded-lg p-6 shadow-xl hover-lift">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-semibold">Cloudy Bay Sauvignon Blanc</h3>
+                    <span class="text-accent-gold font-bold">$65</span>
+                </div>
+                <p class="text-gray-300 mb-2">Marlborough, New Zealand</p>
+                <p class="text-gray-300 text-sm">Refreshing choice for light dishes and appetizers</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 px-6 gradient-bg">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-serif font-bold mb-6">Ready to Experience Our Menu?</h2>
+        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Book your table today and let us create a memorable
+            dining experience for you.</p>
+        <a href="/booking"
+            class="bg-accent-gold text-dark-black font-semibold py-3 px-8 rounded-lg hover:bg-yellow-500 transition duration-300 inline-block text-lg">Make
+            a Reservation</a>
+    </div>
+</section>
+
+<script>
+    // Smooth scrolling for menu navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>
+{% endblock %}

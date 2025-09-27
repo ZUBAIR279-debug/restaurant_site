@@ -1,0 +1,487 @@
+{% extends "base.html" %}
+
+{% block title %}Delivery - Royal Feast{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative py-32 flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1081&q=80"
+            alt="Food Delivery" class="w-full h-full object-cover opacity-40">
+        <div class="absolute inset-0 bg-gradient-to-r from-dark-black to-dark-purple opacity-80"></div>
+    </div>
+    <div class="relative z-10 text-center px-6 animate-fade-in">
+        <h1 class="text-5xl md:text-6xl font-serif font-bold mb-6">Food Delivery</h1>
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto">Restaurant-quality meals delivered to your doorstep</p>
+    </div>
+</section>
+
+<!-- Delivery Menu Section -->
+<section class="py-20 px-6">
+    <div class="container mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif font-bold mb-4">Our Delivery Menu</h2>
+            <p class="text-gray-300 max-w-2xl mx-auto">All your favorite dishes, available for delivery</p>
+        </div>
+
+        <!-- Menu Navigation -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button class="category-btn active text-accent-gold font-semibold hover:underline" data-category="all">All
+                Items</button>
+            <button class="category-btn text-white font-semibold hover:text-accent-gold"
+                data-category="appetizers">Appetizers</button>
+            <button class="category-btn text-white font-semibold hover:text-accent-gold" data-category="mains">Main
+                Courses</button>
+            <button class="category-btn text-white font-semibold hover:text-accent-gold"
+                data-category="desserts">Desserts</button>
+        </div>
+
+        <!-- Menu Items Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="menu-items">
+            <!-- Appetizers -->
+            <div class="menu-item bg-dark-black rounded-lg overflow-hidden shadow-xl hover-lift"
+                data-category="appetizers">
+                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1065&q=80"
+                    alt="Truffle Arancini" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Truffle Arancini</h3>
+                    <p class="text-gray-300 mb-4">Crispy risotto balls filled with black truffle and mozzarella</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-accent-gold font-bold text-lg">$18</span>
+                        <button
+                            class="add-to-cart bg-accent-gold text-dark-black font-semibold py-2 px-4 rounded-lg hover:bg-yellow-500 transition duration-300"
+                            data-id="1" data-name="Truffle Arancini" data-price="18"
+                            data-image="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1065&q=80">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item bg-dark-black rounded-lg overflow-hidden shadow-xl hover-lift"
+                data-category="appetizers">
+                <img src="https://images.unsplash.com/photo-1606755962773-d324e2dabd76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                    alt="Seared Scallops" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Seared Scallops</h3>
+                    <p class="text-gray-300 mb-4">Perfectly seared scallops with cauliflower purée</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-accent-gold font-bold text-lg">$24</span>
+                        <button
+                            class="add-to-cart bg-accent-gold text-dark-black font-semibold py-2 px-4 rounded-lg hover:bg-yellow-500 transition duration-300"
+                            data-id="2" data-name="Seared Scallops" data-price="24"
+                            data-image="https://images.unsplash.com/photo-1606755962773-d324e2dabd76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Courses -->
+            <div class="menu-item bg-dark-black rounded-lg overflow-hidden shadow-xl hover-lift" data-category="mains">
+                <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
+                    alt="Filet Mignon" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Filet Mignon</h3>
+                    <p class="text-gray-300 mb-4">8oz prime beef tenderloin with truffle mashed potatoes</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-accent-gold font-bold text-lg">$42</span>
+                        <button
+                            class="add-to-cart bg-accent-gold text-dark-black font-semibold py-2 px-4 rounded-lg hover:bg-yellow-500 transition duration-300"
+                            data-id="3" data-name="Filet Mignon" data-price="42"
+                            data-image="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item bg-dark-black rounded-lg overflow-hidden shadow-xl hover-lift" data-category="mains">
+                <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                    alt="Lobster Thermidor" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Lobster Thermidor</h3>
+                    <p class="text-gray-300 mb-4">Whole lobster in a creamy brandy sauce with gruyère cheese</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-accent-gold font-bold text-lg">$38</span>
+                        <button
+                            class="add-to-cart bg-accent-gold text-dark-black font-semibold py-2 px-4 rounded-lg hover:bg-yellow-500 transition duration-300"
+                            data-id="4" data-name="Lobster Thermidor" data-price="38"
+                            data-image="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div class="menu-item bg-dark-black rounded-lg overflow-hidden shadow-xl hover-lift"
+                data-category="desserts">
+                <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80"
+                    alt="Chocolate Soufflé" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Chocolate Soufflé</h3>
+                    <p class="text-gray-300 mb-4">Warm chocolate soufflé with vanilla bean ice cream</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-accent-gold font-bold text-lg">$16</span>
+                        <button
+                            class="add-to-cart bg-accent-gold text-dark-black font-semibold py-2 px-4 rounded-lg hover:bg-yellow-500 transition duration-300"
+                            data-id="5" data-name="Chocolate Soufflé" data-price="16"
+                            data-image="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item bg-dark-black rounded-lg overflow-hidden shadow-xl hover-lift"
+                data-category="desserts">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1089&q=80"
+                    alt="Crème Brûlée" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Crème Brûlée</h3>
+                    <p class="text-gray-300 mb-4">Classic vanilla bean custard with caramelized sugar crust</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-accent-gold font-bold text-lg">$12</span>
+                        <button
+                            class="add-to-cart bg-accent-gold text-dark-black font-semibold py-2 px-4 rounded-lg hover:bg-yellow-500 transition duration-300"
+                            data-id="6" data-name="Crème Brûlée" data-price="12"
+                            data-image="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1089&q=80">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cart Section -->
+<section id="cart-section" class="py-20 px-6 bg-dark-purple bg-opacity-30 hidden">
+    <div class="container mx-auto max-w-4xl">
+        <div class="bg-dark-black rounded-lg shadow-2xl p-8">
+            <h2 class="text-3xl font-serif font-bold mb-8">Your Order</h2>
+
+            <div id="cart-items" class="mb-8">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+
+            <div class="flex justify-between items-center mb-8">
+                <span class="text-xl font-semibold">Total:</span>
+                <span id="cart-total" class="text-2xl text-accent-gold font-bold">$0</span>
+            </div>
+
+            <div class="text-center">
+                <button id="checkout-btn"
+                    class="bg-accent-gold text-dark-black font-semibold py-3 px-8 rounded-lg hover:bg-yellow-500 transition duration-300 text-lg">
+                    Proceed to Checkout
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Checkout Form Section -->
+<section id="checkout-section" class="py-20 px-6 hidden">
+    <div class="container mx-auto max-w-4xl">
+        <div class="bg-dark-black rounded-lg shadow-2xl p-8 md:p-12">
+            <h2 class="text-3xl font-serif font-bold mb-8 text-center">Delivery Information</h2>
+            <form id="checkout-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-semibold mb-4">Personal Information</h3>
+                </div>
+                <div>
+                    <label for="delivery-name" class="block text-gray-300 mb-2">Full Name *</label>
+                    <input type="text" id="delivery-name" name="name" required
+                        class="w-full px-4 py-3 bg-dark-purple bg-opacity-30 border border-gray-700 rounded-lg focus:outline-none focus:border-accent-gold transition duration-300">
+                </div>
+                <div>
+                    <label for="delivery-email" class="block text-gray-300 mb-2">Email Address *</label>
+                    <input type="email" id="delivery-email" name="email" required
+                        class="w-full px-4 py-3 bg-dark-purple bg-opacity-30 border border-gray-700 rounded-lg focus:outline-none focus:border-accent-gold transition duration-300">
+                </div>
+                <div>
+                    <label for="delivery-phone" class="block text-gray-300 mb-2">Phone Number *</label>
+                    <input type="tel" id="delivery-phone" name="phone" required
+                        class="w-full px-4 py-3 bg-dark-purple bg-opacity-30 border border-gray-700 rounded-lg focus:outline-none focus:border-accent-gold transition duration-300">
+                </div>
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-semibold mb-4 mt-4">Delivery Address</h3>
+                </div>
+                <div class="md:col-span-2">
+                    <label for="delivery-address" class="block text-gray-300 mb-2">Street Address *</label>
+                    <input type="text" id="delivery-address" name="address" required
+                        class="w-full px-4 py-3 bg-dark-purple bg-opacity-30 border border-gray-700 rounded-lg focus:outline-none focus:border-accent-gold transition duration-300">
+                </div>
+                <div>
+                    <label for="delivery-city" class="block text-gray-300 mb-2">City *</label>
+                    <input type="text" id="delivery-city" name="city" required
+                        class="w-full px-4 py-3 bg-dark-purple bg-opacity-30 border border-gray-700 rounded-lg focus:outline-none focus:border-accent-gold transition duration-300">
+                </div>
+                <div>
+                    <label for="delivery-zip" class="block text-gray-300 mb-2">ZIP Code *</label>
+                    <input type="text" id="delivery-zip" name="zip" required
+                        class="w-full px-4 py-3 bg-dark-purple bg-opacity-30 border border-gray-700 rounded-lg focus:outline-none focus:border-accent-gold transition duration-300">
+                </div>
+                <div class="md:col-span-2">
+                    <label for="delivery-instructions" class="block text-gray-300 mb-2">Delivery Instructions</label>
+                    <textarea id="delivery-instructions" name="instructions" rows="3"
+                        class="w-full px-4 py-3 bg-dark-purple bg-opacity-30 border border-gray-700 rounded-lg focus:outline-none focus:border-accent-gold transition duration-300"></textarea>
+                </div>
+                <div class="md:col-span-2 flex justify-center mt-6">
+                    <button type="submit"
+                        class="bg-accent-gold text-dark-black font-semibold py-3 px-8 rounded-lg hover:bg-yellow-500 transition duration-300 text-lg">
+                        Place Order
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Order Confirmation Section -->
+<section id="confirmation-section" class="py-20 px-6 gradient-bg hidden">
+    <div class="container mx-auto max-w-4xl text-center">
+        <div class="bg-dark-black rounded-lg shadow-2xl p-8 md:p-12">
+            <div class="text-6xl mb-6">✅</div>
+            <h2 class="text-3xl font-serif font-bold mb-4">Order Confirmed!</h2>
+            <p class="text-xl text-gray-300 mb-6">Thank you for your order. Your food is being prepared.</p>
+            <div class="bg-dark-purple bg-opacity-30 rounded-lg p-6 mb-8">
+                <p class="text-lg text-accent-gold font-semibold mb-2">Your rider is on the way!</p>
+                <p class="text-gray-300">Estimated delivery time: <span class="font-semibold">30 minutes</span></p>
+            </div>
+            <p class="text-gray-400">You will be redirected to the homepage in <span id="countdown">5</span> seconds...
+            </p>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Cart functionality
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Update cart display
+    function updateCartDisplay() {
+        const cartItems = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+        const cartSection = document.getElementById('cart-section');
+
+        if (cart.length === 0) {
+            cartSection.classList.add('hidden');
+            return;
+        }
+
+        cartSection.classList.remove('hidden');
+
+        // Calculate total
+        let total = 0;
+        cart.forEach(item => {
+            total += item.price * item.quantity;
+        });
+
+        cartTotal.textContent = `$${total}`;
+
+        // Generate cart items HTML
+        cartItems.innerHTML = '';
+        cart.forEach((item, index) => {
+            const itemHTML = `
+                <div class="flex items-center justify-between py-4 border-b border-gray-700">
+                    <div class="flex items-center">
+                        <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded-lg mr-4">
+                        <div>
+                            <h3 class="font-semibold">${item.name}</h3>
+                            <p class="text-gray-300">$${item.price} x ${item.quantity}</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <button class="decrease-quantity text-gray-300 hover:text-accent-gold mr-2" data-index="${index}">-</button>
+                        <span class="mx-2">${item.quantity}</span>
+                        <button class="increase-quantity text-gray-300 hover:text-accent-gold ml-2" data-index="${index}">+</button>
+                        <button class="remove-item text-red-500 hover:text-red-400 ml-4" data-index="${index}">Remove</button>
+                    </div>
+                </div>
+            `;
+            cartItems.innerHTML += itemHTML;
+        });
+
+        // Add event listeners for cart controls
+        document.querySelectorAll('.decrease-quantity').forEach(button => {
+            button.addEventListener('click', function () {
+                const index = parseInt(this.getAttribute('data-index'));
+                if (cart[index].quantity > 1) {
+                    cart[index].quantity--;
+                } else {
+                    cart.splice(index, 1);
+                }
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartDisplay();
+            });
+        });
+
+        document.querySelectorAll('.increase-quantity').forEach(button => {
+            button.addEventListener('click', function () {
+                const index = parseInt(this.getAttribute('data-index'));
+                cart[index].quantity++;
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartDisplay();
+            });
+        });
+
+        document.querySelectorAll('.remove-item').forEach(button => {
+            button.addEventListener('click', function () {
+                const index = parseInt(this.getAttribute('data-index'));
+                cart.splice(index, 1);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                updateCartDisplay();
+            });
+        });
+    }
+
+    // Add to cart functionality
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', function () {
+            const id = this.getAttribute('data-id');
+            const name = this.getAttribute('data-name');
+            const price = parseFloat(this.getAttribute('data-price'));
+            const image = this.getAttribute('data-image');
+
+            // Check if item already in cart
+            const existingItem = cart.find(item => item.id === id);
+
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({
+                    id: id,
+                    name: name,
+                    price: price,
+                    image: image,
+                    quantity: 1
+                });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartDisplay();
+
+            // Show success message
+            const originalText = this.textContent;
+            this.textContent = 'Added!';
+            this.classList.remove('bg-accent-gold');
+            this.classList.add('bg-green-500');
+
+            setTimeout(() => {
+                this.textContent = originalText;
+                this.classList.remove('bg-green-500');
+                this.classList.add('bg-accent-gold');
+            }, 1000);
+        });
+    });
+
+    // Category filtering
+    document.querySelectorAll('.category-btn').forEach(button => {
+        button.addEventListener('click', function () {
+            const category = this.getAttribute('data-category');
+
+            // Update active button
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('active', 'text-accent-gold');
+                btn.classList.add('text-white');
+            });
+            this.classList.add('active', 'text-accent-gold');
+            this.classList.remove('text-white');
+
+            // Filter items
+            document.querySelectorAll('.menu-item').forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        });
+    });
+
+    // Checkout functionality
+    document.getElementById('checkout-btn').addEventListener('click', function () {
+        document.getElementById('cart-section').classList.add('hidden');
+        document.getElementById('checkout-section').classList.remove('hidden');
+    });
+
+    // Checkout form submission
+    document.getElementById('checkout-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Simple form validation
+        const formData = new FormData(this);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const phone = formData.get('phone');
+        const address = formData.get('address');
+        const city = formData.get('city');
+        const zip = formData.get('zip');
+
+        if (!name || !email || !phone || !address || !city || !zip) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+
+        // Prepare order data
+        const orderData = {
+            customer_info: {
+                name: name,
+                email: email,
+                phone: phone,
+                address: address,
+                city: city,
+                zip: zip,
+                instructions: formData.get('instructions')
+            },
+            items: cart,
+            total: cart.reduce((sum, item) => sum + (item.price * item.quantity), 0),
+            order_date: new Date().toISOString()
+        };
+
+        // Send order to server
+        fetch('/submit_delivery_order', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(orderData)
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Show confirmation
+                    document.getElementById('checkout-section').classList.add('hidden');
+                    document.getElementById('confirmation-section').classList.remove('hidden');
+
+                    // Start countdown for redirect
+                    let countdown = 5;
+                    const countdownElement = document.getElementById('countdown');
+
+                    const countdownInterval = setInterval(() => {
+                        countdown--;
+                        countdownElement.textContent = countdown;
+
+                        if (countdown <= 0) {
+                            clearInterval(countdownInterval);
+                            // Clear cart and redirect to home
+                            localStorage.removeItem('cart');
+                            window.location.href = '/';
+                        }
+                    }, 1000);
+                } else {
+                    alert('There was an error processing your order. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error processing your order. Please try again.');
+            });
+    });
+
+    // Initialize cart display
+    updateCartDisplay();
+</script>
+{% endblock %}

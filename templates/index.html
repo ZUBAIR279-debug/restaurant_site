@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="Restaurant Interior" class="w-full h-full object-cover opacity-40">
+        <div class="absolute inset-0 bg-gradient-to-r from-dark-black to-dark-purple opacity-80"></div>
+    </div>
+    <div class="relative z-10 text-center px-6 animate-fade-in">
+        <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6">Royal Feast</h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Experience culinary excellence in an ambiance of luxury
+            and comfort</p>
+        <div class="space-x-4">
+            <a href="/menu"
+                class="bg-accent-gold text-dark-black font-semibold py-3 px-8 rounded-lg hover:bg-yellow-500 transition duration-300 inline-block">View
+                Menu</a>
+            <a href="/booking"
+                class="border-2 border-accent-gold text-accent-gold font-semibold py-3 px-8 rounded-lg hover:bg-accent-gold hover:text-dark-black transition duration-300 inline-block">Make
+                Reservation</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Preview Section -->
+<section class="py-20 px-6">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="animate-slide-up">
+                <h2 class="text-4xl font-serif font-bold mb-6">Our Story</h2>
+                <p class="text-gray-300 mb-6">Founded in 2005, Royal Feast has been serving exceptional cuisine crafted
+                    from the finest ingredients. Our chefs combine traditional techniques with innovative approaches to
+                    create memorable dining experiences.</p>
+                <p class="text-gray-300 mb-8">We believe that great food brings people together, and our restaurant is
+                    designed to be a place where memories are made.</p>
+                <a href="/about" class="text-accent-gold font-semibold hover:underline">Learn More About Us →</a>
+            </div>
+            <div class="relative animate-slide-up">
+                <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
+                    alt="Chef preparing food" class="rounded-lg shadow-2xl w-full h-96 object-cover">
+                <div
+                    class="absolute -bottom-6 -right-6 w-32 h-32 bg-accent-gold rounded-lg flex items-center justify-center transform rotate-12">
+                    <span class="text-dark-black font-serif font-bold text-xl">Since 2005</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Dishes Section -->
+<section class="py-20 px-6 bg-dark-purple bg-opacity-30">
+    <div class="container mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif font-bold mb-4">Signature Dishes</h2>
+            <p class="text-gray-300 max-w-2xl mx-auto">A selection of our most beloved creations that showcase the
+                artistry of our culinary team.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Dish 1 -->
+            <div class="bg-dark-black rounded-lg overflow-hidden shadow-xl hover-lift">
+                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1065&q=80"
+                    alt="Grilled Salmon" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Truffle Infused Filet Mignon</h3>
+                    <p class="text-gray-300 mb-4">Prime beef tenderloin with black truffle sauce and seasonal
+                        vegetables.</p>
+                    <span class="text-accent-gold font-bold">$42</span>
+                </div>
+            </div>
+            <!-- Dish 2 -->
+            <div class="bg-dark-black rounded-lg overflow-hidden shadow-xl hover-lift">
+                <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                    alt="Pasta Dish" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Lobster Thermidor</h3>
+                    <p class="text-gray-300 mb-4">Fresh lobster in a creamy brandy sauce with gruyère cheese.</p>
+                    <span class="text-accent-gold font-bold">$38</span>
+                </div>
+            </div>
+            <!-- Dish 3 -->
+            <div class="bg-dark-black rounded-lg overflow-hidden shadow-xl hover-lift">
+                <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80"
+                    alt="Dessert" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Chocolate Soufflé</h3>
+                    <p class="text-gray-300 mb-4">Decadent chocolate soufflé served with vanilla bean ice cream.</p>
+                    <span class="text-accent-gold font-bold">$16</span>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-12">
+            <a href="/menu"
+                class="bg-accent-gold text-dark-black font-semibold py-3 px-8 rounded-lg hover:bg-yellow-500 transition duration-300 inline-block">View
+                Full Menu</a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-20 px-6">
+    <div class="container mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif font-bold mb-4">What Our Guests Say</h2>
+            <p class="text-gray-300 max-w-2xl mx-auto">Don't just take our word for it - hear from our valued customers.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-dark-purple bg-opacity-30 p-8 rounded-lg hover-lift">
+                <div class="text-accent-gold text-4xl mb-4">"</div>
+                <p class="text-gray-300 mb-6">The most exquisite dining experience I've had this year. Every dish was a
+                    masterpiece!</p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-accent-gold rounded-full mr-4"></div>
+                    <div>
+                        <h4 class="font-semibold">Sarah Johnson</h4>
+                        <p class="text-gray-400 text-sm">Food Critic</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="bg-dark-purple bg-opacity-30 p-8 rounded-lg hover-lift">
+                <div class="text-accent-gold text-4xl mb-4">"</div>
+                <p class="text-gray-300 mb-6">Perfect ambiance, impeccable service, and food that delights all senses.
+                    Will definitely return!</p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-accent-gold rounded-full mr-4"></div>
+                    <div>
+                        <h4 class="font-semibold">Michael Torres</h4>
+                        <p class="text-gray-400 text-sm">Regular Guest</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="bg-dark-purple bg-opacity-30 p-8 rounded-lg hover-lift">
+                <div class="text-accent-gold text-4xl mb-4">"</div>
+                <p class="text-gray-300 mb-6">The attention to detail in both food and service is remarkable. A truly
+                    royal feast indeed!</p>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-accent-gold rounded-full mr-4"></div>
+                    <div>
+                        <h4 class="font-semibold">Emily Chen</h4>
+                        <p class="text-gray-400 text-sm">First-time Visitor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 px-6 gradient-bg">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-serif font-bold mb-6">Ready for an Unforgettable Experience?</h2>
+        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Book your table today and indulge in a culinary journey
+            like no other.</p>
+        <a href="/booking"
+            class="bg-accent-gold text-dark-black font-semibold py-3 px-8 rounded-lg hover:bg-yellow-500 transition duration-300 inline-block text-lg">Reserve
+            Your Table</a>
+    </div>
+</section>
+{% endblock %}

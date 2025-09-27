@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% block title %}About Us - Royal Feast{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="relative py-32 flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="Restaurant Kitchen" class="w-full h-full object-cover opacity-40">
+        <div class="absolute inset-0 bg-gradient-to-r from-dark-black to-dark-purple opacity-80"></div>
+    </div>
+    <div class="relative z-10 text-center px-6 animate-fade-in">
+        <h1 class="text-5xl md:text-6xl font-serif font-bold mb-6">Our Story</h1>
+        <p class="text-xl md:text-2xl max-w-3xl mx-auto">A journey of passion, flavor, and culinary excellence since
+            2005</p>
+    </div>
+</section>
+
+<!-- Our Story Section -->
+<section class="py-20 px-6">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+            <div class="animate-slide-up">
+                <h2 class="text-4xl font-serif font-bold mb-6">The Beginning</h2>
+                <p class="text-gray-300 mb-6">Royal Feast was born from a simple dream: to create a dining experience
+                    that transcends ordinary meals. Our founder, Chef Alessandro Moretti, envisioned a place where food
+                    would be an art form and every guest would feel like royalty.</p>
+                <p class="text-gray-300">Starting as a small bistro with just 10 tables, we've grown into an
+                    award-winning establishment known for our innovative cuisine and impeccable service. Yet, our core
+                    philosophy remains unchanged: to source the finest ingredients and transform them into unforgettable
+                    culinary experiences.</p>
+            </div>
+            <div class="relative animate-slide-up">
+                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                    alt="Restaurant Founder" class="rounded-lg shadow-2xl w-full h-96 object-cover">
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1 relative animate-slide-up">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                    alt="Restaurant Interior" class="rounded-lg shadow-2xl w-full h-96 object-cover">
+            </div>
+            <div class="order-1 md:order-2 animate-slide-up">
+                <h2 class="text-4xl font-serif font-bold mb-6">Our Philosophy</h2>
+                <p class="text-gray-300 mb-6">At Royal Feast, we believe that dining is more than just nourishment—it's
+                    an experience that engages all the senses. Our philosophy is built on three pillars:</p>
+                <ul class="text-gray-300 space-y-4">
+                    <li class="flex items-start">
+                        <span class="text-accent-gold mr-2">•</span>
+                        <span><strong>Quality Ingredients:</strong> We work directly with local farmers and
+                            international suppliers to ensure every ingredient meets our exacting standards.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-accent-gold mr-2">•</span>
+                        <span><strong>Culinary Innovation:</strong> Our chefs continuously explore new techniques and
+                            flavor combinations while respecting culinary traditions.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-accent-gold mr-2">•</span>
+                        <span><strong>Exceptional Service:</strong> From the moment you arrive until your departure, our
+                            staff is dedicated to making your experience memorable.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="py-20 px-6 bg-dark-purple bg-opacity-30">
+    <div class="container mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif font-bold mb-4">Meet Our Culinary Team</h2>
+            <p class="text-gray-300 max-w-2xl mx-auto">The talented individuals behind the Royal Feast experience</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Team Member 1 -->
+            <div class="bg-dark-black rounded-lg overflow-hidden shadow-xl hover-lift text-center p-6">
+                <div
+                    class="w-32 h-32 bg-accent-gold rounded-full mx-auto mb-6 flex items-center justify-center text-dark-black text-4xl font-bold">
+                    AM</div>
+                <h3 class="text-xl font-semibold mb-2">Alessandro Moretti</h3>
+                <p class="text-accent-gold mb-4">Executive Chef & Founder</p>
+                <p class="text-gray-300">With over 25 years of culinary experience, Chef Alessandro brings his passion
+                    for Italian-French fusion cuisine to every dish.</p>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="bg-dark-black rounded-lg overflow-hidden shadow-xl hover-lift text-center p-6">
+                <div
+                    class="w-32 h-32 bg-accent-gold rounded-full mx-auto mb-6 flex items-center justify-center text-dark-black text-4xl font-bold">
+                    SM</div>
+                <h3 class="text-xl font-semibold mb-2">Sophie Martinez</h3>
+                <p class="text-accent-gold mb-4">Pastry Chef</p>
+                <p class="text-gray-300">Trained in Paris, Chef Sophie creates desserts that are both visually stunning
+                    and delightfully flavorful.</p>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="bg-dark-black rounded-lg overflow-hidden shadow-xl hover-lift text-center p-6">
+                <div
+                    class="w-32 h-32 bg-accent-gold rounded-full mx-auto mb-6 flex items-center justify-center text-dark-black text-4xl font-bold">
+                    JW</div>
+                <h3 class="text-xl font-semibold mb-2">James Wilson</h3>
+                <p class="text-accent-gold mb-4">Sommelier</p>
+                <p class="text-gray-300">James curates our extensive wine collection, ensuring perfect pairings for
+                    every dish on our menu.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Awards Section -->
+<section class="py-20 px-6">
+    <div class="container mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-serif font-bold mb-4">Awards & Recognition</h2>
+            <p class="text-gray-300 max-w-2xl mx-auto">Our commitment to excellence has been recognized by prestigious
+                institutions in the culinary world.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="p-6">
+                <div class="text-5xl text-accent-gold mb-4">🏆</div>
+                <h3 class="font-semibold mb-2">Michelin Star</h3>
+                <p class="text-gray-300">2020, 2021, 2022</p>
+            </div>
+            <div class="p-6">
+                <div class="text-5xl text-accent-gold mb-4">⭐</div>
+                <h3 class="font-semibold mb-2">AAA Five Diamond</h3>
+                <p class="text-gray-300">2018-2023</p>
+            </div>
+            <div class="p-6">
+                <div class="text-5xl text-accent-gold mb-4">🍽️</div>
+                <h3 class="font-semibold mb-2">World's Best Restaurants</h3>
+                <p class="text-gray-300">Top 100, 2022</p>
+            </div>
+            <div class="p-6">
+                <div class="text-5xl text-accent-gold mb-4">👨‍🍳</div>
+                <h3 class="font-semibold mb-2">Chef of the Year</h3>
+                <p class="text-gray-300">Culinary Institute, 2021</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 px-6 gradient-bg">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-serif font-bold mb-6">Experience Our Story Firsthand</h2>
+        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join us for an evening of exceptional cuisine and create
+            your own Royal Feast memories.</p>
+        <div class="space-x-4">
+            <a href="/booking"
+                class="bg-accent-gold text-dark-black font-semibold py-3 px-8 rounded-lg hover:bg-yellow-500 transition duration-300 inline-block">Make
+                a Reservation</a>
+            <a href="/menu"
+                class="border-2 border-accent-gold text-accent-gold font-semibold py-3 px-8 rounded-lg hover:bg-accent-gold hover:text-dark-black transition duration-300 inline-block">View
+                Our Menu</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
